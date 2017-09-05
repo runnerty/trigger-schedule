@@ -1,0 +1,24 @@
+{
+  "name": "@runnerty/trigger-schedule",
+  "version": "0.0.1",
+  "description": "Runnerty module: Trigger schedule",
+  "author": "Coderty",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runnerty/trigger-schedule.git"
+  },
+  "keywords": [
+    "runnerty",
+    "trigger",
+    "schedule"
+  ],
+  "bugs": {
+    "url": "https://github.com/runnerty/trigger-schedule/issues"
+  },
+  "homepage": "https://github.com/runnerty/trigger-schedule#readme",
+  "dependencies": {
+    "node-schedule": "^1.2.4"
+  }
+}
