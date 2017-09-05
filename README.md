@@ -1,4 +1,4 @@
-# SCHEDULE trigger for [Runnerty]:
+# Schedule Trigger for [Runnerty]:
 
 ### Configuration sample:
 ```json
@@ -11,6 +11,10 @@
 ### Plan sample:
 ```json
 {
+  "id":"schedule_default",
+  "start_date":"2017-09-05T00:00:00.00Z",
+  "end_date":"2099-09-05T00:00:00.00Z",
+  "schedule_interval":"*/1 * * * *"
 }
 ```
 
