@@ -9,7 +9,7 @@ class triggerSchedule extends Trigger {
   }
 
   start() {
-    let _this = this;
+    const _this = this;
 
     // Create schedule Job with schedule_interval params:
     _this.scheduleRepeater = schedule.scheduleJob(
