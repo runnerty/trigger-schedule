@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-const schedule = require("node-schedule");
-const Trigger = global.TriggerClass;
+const schedule = require('node-schedule');
+const Trigger = require('@runnerty/module-core').Trigger;
 
 class triggerSchedule extends Trigger {
   constructor(chain, params) {
@@ -14,7 +14,7 @@ class triggerSchedule extends Trigger {
     // Create schedule Job with schedule_interval params:
     _this.scheduleRepeater = schedule.scheduleJob(
       _this.params.schedule_interval,
-      function() {
+      function () {
         // Check if job must be canceled:
         if (new Date(_this.params.end_date) < new Date()) {
           _this.scheduleRepeater.cancel();
@@ -24,7 +24,7 @@ class triggerSchedule extends Trigger {
           .startChain()
           .then(() => {})
           .catch(err => {
-            _this.logger.error("startChain error (triggerSchedule):", err);
+            _this.logger.error('startChain error (triggerSchedule):', err);
           });
       }.bind(null, _this)
     );
