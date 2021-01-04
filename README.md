@@ -21,8 +21,12 @@ npm i @runnerty/trigger-schedule
 Add in [config.json]:
 ```json
 {
-  "id": "schedule_default",
-  "type": "@runnerty-trigger-schedule"
+  "triggers": [
+    {
+      "id": "schedule_default",
+      "type": "@runnerty-trigger-schedule"
+    }
+  ]
 }
 ```
 
@@ -30,10 +34,14 @@ Add in [config.json]:
 Add in [plan.json]:
 ```json
 {
-  "id":"schedule_default",
-  "start_date":"2017-09-05T00:00:00.00Z",
-  "end_date":"2099-09-05T00:00:00.00Z",
-  "schedule_interval":"*/1 * * * *"
+  "triggers": [
+    {
+      "id":"schedule_default",
+      "start_date":"2017-09-05T00:00:00.00Z",
+      "end_date":"2099-09-05T00:00:00.00Z",
+      "schedule_interval":"*/1 * * * *"
+    }
+  ]
 }
 ```
 
