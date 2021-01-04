@@ -1,0 +1,8 @@
+{
+  "triggers": [
+    {
+      "id": "schedule_default",
+      "type": "@runnerty-trigger-schedule"
+    }
+  ]
+}
