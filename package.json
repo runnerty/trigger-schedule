@@ -1,8 +1,8 @@
 {
   "name": "@runnerty/trigger-schedule",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0",
   "description": "Runnerty module: Trigger schedule",
-  "author": "Coderty",
+  "author": "Runnerty Tech",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,12 @@
   "homepage": "https://github.com/runnerty/trigger-schedule#readme",
   "dependencies": {
     "node-schedule": "1.3.2",
-    "@runnerty/module-core": "alpha"
+    "@runnerty/module-core": "3.0.1"
   },
   "devDependencies": {
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1"
   }
 }
