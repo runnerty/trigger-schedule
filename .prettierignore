@@ -1,0 +1,13 @@
+node_modules
+.all-contributorsrc
+.eslintignore
+.gitignore
+.prettierignore
+.DS_Store
+LICENSE
+*.png
+*.txt
+TODO
+docs/functions.md
+*.md
+test.log
