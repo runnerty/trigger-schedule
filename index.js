@@ -9,30 +9,26 @@ class triggerSchedule extends Trigger {
   }
 
   start() {
-    const _this = this;
-
+    const _self = this;
     // Create schedule Job with schedule_interval params:
-    _this.scheduleRepeater = schedule.scheduleJob(
-      _this.params.schedule_interval,
+    this.scheduleRepeater = schedule.scheduleJob(
+      _self.params.schedule_interval,
       function () {
         // Check if job must be canceled:
-        if (new Date(_this.params.end_date) < new Date()) {
-          _this.scheduleRepeater.cancel();
+        if (new Date(_self.params.end_date) < new Date()) {
+          _self.scheduleRepeater.cancel();
         }
         // Start Chain:
-        _this
-          .startChain()
-          .then(() => {})
-          .catch(err => {
-            _this.logger.error('startChain error (triggerSchedule):', err);
-          });
-      }.bind(null, _this)
+        _self.startChain().catch(err => {
+          _self.logger.error('startChain error (triggerSchedule):', err);
+        });
+      }.bind(null, _self)
     );
 
     // Schedule cancelation Job (end_date):
-    if (_this.params.end_date) {
-      _this.scheduleCancel = schedule.scheduleJob(new Date(_this.params.end_date), _ => {
-        _this.scheduleRepeater.cancel();
+    if (this.params.end_date) {
+      this.scheduleCancel = schedule.scheduleJob(new Date(this.params.end_date), _ => {
+        this.scheduleRepeater.cancel();
       });
     }
   }
