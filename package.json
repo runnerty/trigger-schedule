@@ -1,6 +1,6 @@
 {
   "name": "@runnerty/trigger-schedule",
-  "version": "3.0.6",
+  "version": "3.1.0",
   "description": "Runnerty module: Trigger schedule",
   "author": "Runnerty Tech",
   "license": "MIT",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/runnerty/trigger-schedule#readme",
   "dependencies": {
-    "@runnerty/module-core": "~3.0.8",
+    "@runnerty/module-core": "~3.1.0",
     "node-schedule": "~2.1.0"
   },
   "devDependencies": {
